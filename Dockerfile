@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 RUN apt-get update
 RUN apt-get install -y \
     sudo \
+    # wget \
     zip \
     unzip \
     curl \
@@ -32,6 +33,18 @@ RUN apt-get install nodejs -y
 RUN npm install npm@6.8.0 -g
 RUN command -v node
 RUN command -v npm
+
+# PHPUnit
+# RUN wget https://phar.phpunit.de/phpunit.phar
+# RUN chmod +x phpunit.phar
+# RUN mv phpunit.phar /usr/local/bin/phpunit
+# RUN command -v phpunit
+
+# PHPCodeSniffer
+# RUN wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+# RUN chmod +x phpcs.phar
+# RUN mv phpcs.phar /usr/local/bin/phpcs
+# RUN command -v phpcs
 
 # Display versions installed
 RUN php -v
