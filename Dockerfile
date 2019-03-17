@@ -1,33 +1,15 @@
 FROM ubuntu:18.04
 
-ENV TZ=UTC
-
-RUN export LC_ALL=C.UTF-8
-RUN DEBIAN_FRONTEND=noninteractive
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
 RUN apt-get update
 RUN apt-get install -y \
     sudo \
-    autoconf \
-    autogen \
-    language-pack-en-base \
-    wget \
     zip \
     unzip \
     curl \
     rsync \
-    ssh \
-    openssh-client \
     git \
     build-essential \
-    apt-utils \
-    software-properties-common \
-    nasm \
-    libjpeg-dev \
-    libpng-dev \
-    libpng16-16
+    apt-utils 
 
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
