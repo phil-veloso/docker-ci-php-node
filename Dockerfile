@@ -9,7 +9,8 @@ RUN apt-get install -y \
     rsync \
     git \
     build-essential \
-    apt-utils 
+    apt-utils \
+    software-properties-common
 
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
