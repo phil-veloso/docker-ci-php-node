@@ -41,6 +41,9 @@ RUN npm install npm@6.8.0 -g
 RUN command -v node
 RUN command -v npm
 
+# NPM install GULP
+RUN /usr/bin/npm install -g gulp
+
 # PHPUnit
 # RUN wget https://phar.phpunit.de/phpunit.phar
 # RUN chmod +x phpunit.phar
