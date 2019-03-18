@@ -24,6 +24,8 @@ RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
 # PHP
 RUN add-apt-repository ppa:ondrej/php && apt-get update && apt-get install -y php7.3
+RUN apt-get install -y \
+    php7.3-mbstring
 RUN command -v php
 
 # Composer
