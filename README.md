@@ -9,16 +9,19 @@
 ## Installed packages
   * Umbuntu
       * sudo 
-      *  wget 
+      * wget
       * zip 
       * unzip 
       * curl 
       * rsync 
       * git 
+      * git-ftp
       * build-essential 
       * apt-utils 
       * software-properties-common  
   * PHP 7.3
+    * mbstring
   * Composer
   * Node.js 11
   * npm 6
+    * gulp

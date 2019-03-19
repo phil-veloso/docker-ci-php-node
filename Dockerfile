@@ -20,7 +20,8 @@ RUN apt-get install -y \
     apt-utils \
     software-properties-common
 
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+# git-ftp
+RUN add-apt-repository -y ppa:git-ftp/ppa && apt-get update && apt-get install -y git-ftp
 
 # PHP
 RUN add-apt-repository ppa:ondrej/php && apt-get update && apt-get install -y php7.3
